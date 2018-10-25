@@ -55,10 +55,11 @@ public static class GlobalMouseListenerExample implements NativeMouseInputListen
         }
         if(e.getButton() == NativeMouseEvent.BUTTON2)
         {
-            try {
-            BasicPlayer player = new BasicPlayer();
-            player.open(new URL("file:///" + "C:\\Program Files\\Magic\\Sploosh.mp3"));
-            player.play();
+            try
+            {
+                BasicPlayer player = new BasicPlayer();
+                player.open(new URL("file:///" + "C:\\Program Files\\Magic\\Sploosh.mp3"));
+                player.play();
             } 
             catch (BasicPlayerException | MalformedURLException er) 
             {}
@@ -78,16 +79,17 @@ public static class GlobalMouseListenerExample implements NativeMouseInputListen
         public void nativeMouseDragged(NativeMouseEvent nme) {}
     }
 
-public static class GlobalMouseWheelListenerExample implements NativeMouseWheelListener {
+public static class GlobalMouseWheelListenerExample implements NativeMouseWheelListener 
+{
         @Override
-	public void nativeMouseWheelMoved(NativeMouseWheelEvent e) {
+	public void nativeMouseWheelMoved(NativeMouseWheelEvent e)
+        {
             
             BasicPlayer player = new BasicPlayer();
             try 
             {
                 player.open(new URL("file:///" + "C:\\Program Files\\Magic\\WW_Link_BigSpin.wav"));
                 player.play();
-                System.out.println("ree");
             }
             catch (BasicPlayerException | MalformedURLException er) {}
 	}
